@@ -1,0 +1,13 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,             // ✅ This line tells ESLint to allow `process`, `require`, etc.
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "extends": "eslint:recommended",
+  "rules": {}
+}

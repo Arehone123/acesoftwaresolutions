@@ -152,7 +152,8 @@ const LandingPage = () => {
                 color: "white",
                 padding: "40px 60px",
                 boxSizing: "border-box",
-                fontFamily: "'Poppins', sans-serif"
+                fontFamily: "'Poppins', sans-serif",
+                margin: "40px"
             }}>
                 {/* Left Side: Text */}
                 <div className="text-content" style={{

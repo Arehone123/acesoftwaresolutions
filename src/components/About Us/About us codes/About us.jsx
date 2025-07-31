@@ -3,6 +3,7 @@ import yourLogo from "../About us Assets/ace logo.jpg";
 
 const AboutUs = () => {
     return (
+
         <div
             className="about-us-section"
             style={{
@@ -18,10 +19,12 @@ const AboutUs = () => {
                 boxSizing: "border-box",
                 borderRadius: "5px",
                 border: "2px solid black",
-                maxWidth: "1200px",
-                margin: "0 auto"
+                maxWidth: "1400px",
+                margin: "0 auto",
+                paddingTop: "20px",
             }}
         >
+
             {/* Text Content */}
             <div style={{ flex: "1", minWidth: "500px", maxWidth: "600px" }}>
                 <h1 style={{ fontSize: "2.9rem", lineHeight: "2.5", textAlign: "center", position: "relative", color: "Black" }}>

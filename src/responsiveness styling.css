@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .about-us-section {
+        flex-direction: column;
+    }
+
+    .about-us-section > div {
+        min-width: 100% !important;
+        max-width: 100% !important;
+        text-align: center;
+    }
+}

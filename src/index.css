@@ -66,3 +66,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@media (max-width: 768px) {
+  .about-us-section {
+    flex-direction: column;
+  }
+
+  .about-us-section > div {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+  }
+}

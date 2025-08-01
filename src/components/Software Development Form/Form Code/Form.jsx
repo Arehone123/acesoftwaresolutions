@@ -93,14 +93,15 @@ const SoftwareRequestForm = () => {
                 <h2 style={styles.header}>Request Software & Book a Meeting</h2>
                 <form onSubmit={handleSubmit}>
                     {/* Row 1: Full Name & Email */}
-                    <div style={styles.grid2}>
-                        <Input label="Full Name *" name="fullName" type="text" value={formData.fullName} onChange={handleChange} placeholder="Enter your full name" required />
+                    <div className="grid-2">
+
+                    <Input label="Full Name *" name="fullName" type="text" value={formData.fullName} onChange={handleChange} placeholder="Enter your full name" required />
                         <Input label="Email Address *" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="your.email@example.com" required />
                     </div>
 
                     {/* Row 2: Phone & Software Type */}
-                    <div style={styles.grid2}>
-                        <Input label="Phone Number *" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+27 XX XXX XXXX" required />
+                    <div className="grid-2">
+                    <Input label="Phone Number *" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+27 XX XXX XXXX" required />
                         <Input label="Software Type *" name="softwareType" type="text" value={formData.softwareType} onChange={handleChange} placeholder="e.g., CRM, Mobile App" required />
                     </div>
 
@@ -155,8 +156,9 @@ const SoftwareRequestForm = () => {
                     </div>
 
                     {/* Meeting Date & Time */}
-                    <div style={styles.grid2}>
-                        <Input label="Preferred Meeting Date *" name="meetingDate" type="date" value={formData.meetingDate} onChange={handleChange} required min={new Date().toISOString().split('T')[0]} />
+                    <div className="grid-2">
+
+                    <Input label="Preferred Meeting Date *" name="meetingDate" type="date" value={formData.meetingDate} onChange={handleChange} required min={new Date().toISOString().split('T')[0]} />
                         <Input label="Preferred Meeting Time *" name="meetingTime" type="time" value={formData.meetingTime} onChange={handleChange} required />
                     </div>
 
@@ -214,10 +216,13 @@ const styles = {
     },
     grid2: {
         display: "grid",
-        gridTemplateColumns: "1fr 1fr",
+        gridTemplateColumns: "1fr",
         gap: "20px",
-        marginBottom: "20px"
+        marginBottom: "20px",
     },
+
+// We'll override this with media query below
+
     aiSuggestionBox: {
         marginTop: "15px",
         background: "#f0fdf4",
@@ -299,6 +304,22 @@ const cssStyles = `
     color: #dc2626;
     border: 1px solid rgba(239, 68, 68, 0.2);
 }
+@media (min-width: 768px) {
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .submit-button {
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+}
+
+
 `;
 
 export default SoftwareRequestForm;
